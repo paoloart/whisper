@@ -5,7 +5,7 @@ import torch
 def trans():
     print("start transcribing")
     option = dict(language='Italian')
-    model = whisper.load_model("small")
+    model = whisper.load_model("large")
     result = model.transcribe("output.mp3", **option)
     print(result["text"])
     del(model)

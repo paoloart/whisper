@@ -2,6 +2,7 @@ import myrec
 import PySimpleGUI as sg
 from myrec import onrec
 import transcribe
+import torch
 
 layout = [[sg.Text("Record your thought")],
           [sg.Button("rec")], 
@@ -12,7 +13,7 @@ layout = [[sg.Text("Record your thought")],
 
 # add to sg.Text("Your thought are good")
     
-
+print("Is GPU available?",torch.cuda.is_available())
 # Create the window
 window = sg.Window("Demo", layout, margins=(300, 300))
 
@@ -31,7 +32,7 @@ while True:
     
     # End program if user closes window or
     # presses the OK button
-    if event == "OK" or event == sg.WIN_CLOSED:
+    if event == "close" or event == sg.WIN_CLOSED:
         break
 
 window.close()
