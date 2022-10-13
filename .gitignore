@@ -1,1 +1,6 @@
-Cognizione1.mp3
+*.mp3
+*.pyc
+__pycache__/*
+__pycache__/myrec.cpython-39.pyc
+__pycache__/transcribe.cpython-39.pyc
+file.txt
