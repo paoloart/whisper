@@ -3,11 +3,12 @@ import time
 
 def preload()->None:
     global model # get the global variable model
-    model = whisper.load_model("large") #small, medium, large models are available
+    model = whisper.load_model("medium") #small, medium, large models are available
+    print("model loaded")
     return model
 
 def trans(window, start,filepath="input.mp3")->None:
-    """"
+    """
     This function transcribes the data from the whisper file to the console
     """
     global model

@@ -9,6 +9,7 @@ import multiprocessing
 
 
 
+
 if __name__ == "__main__": 
     
    
@@ -20,7 +21,7 @@ if __name__ == "__main__":
     # Layout of the graphical interface
     layout = [[sg.Text('', size=(50, 1), relief='sunken', font=('Courier', 11),
                text_color='yellow', background_color='black',key='TEXT')],
-              [sg.Text("Record your thought")],
+            [sg.Text("Record your thought")],
             [sg.Graph(
                 canvas_size=(20, 20),
                 graph_bottom_left=(0, 0),
@@ -52,7 +53,7 @@ if __name__ == "__main__":
     model_loaded = False
     # Create an event loop
     while True:
-        event, values = window.read(timeout=20) # Read the event that happened
+        event, values = window.read(timeout=140) # Read the event that happened
         # if state reach the max value, reset it
         if state < 50:
             state = (state+1)%51 
